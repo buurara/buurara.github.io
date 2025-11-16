@@ -1,0 +1,375 @@
+/* 
+   DESIGN 2: MODERN & BOLD
+   Contemporary design with strong typography and accent colors
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.nav-brand {
+    color: #667eea;
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 18px 0;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu li::before {
+    content: none;
+}
+
+.nav-menu a {
+    display: block;
+    color: #444;
+    padding: 22px 20px;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 80%;
+}
+
+.nav-menu a.active {
+    color: #667eea;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 50px 40px;
+    background-color: white;
+    min-height: calc(100vh - 120px);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.page-header {
+    text-align: center;
+    padding: 20px 0 40px 0;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #f0f0f0;
+}
+
+header h1,
+.page-header h1 {
+    font-size: 3em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    font-weight: 400;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 20px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 5px;
+    height: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 14px;
+    font-size: 1.05em;
+    padding-left: 28px;
+    position: relative;
+}
+
+ul li::before {
+    content: "▶";
+    color: #764ba2;
+    font-size: 0.7em;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+}
+
+.links ul li::before {
+    content: "→";
+    font-size: 1em;
+    top: 0;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+/* Publications */
+.publication {
+    margin-bottom: 35px;
+    padding: 25px;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+}
+
+.pub-title {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.pub-authors {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.pub-journal {
+    font-size: 0.95em;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.pub-links {
+    font-size: 0.9em;
+}
+
+.pub-links a {
+    margin-right: 15px;
+    padding: 4px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.pub-links a:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Grants */
+.grant {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 4px solid #764ba2;
+}
+
+.grant-meta {
+    font-size: 0.9em;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.project-meta {
+    font-size: 0.9em;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* Talks */
+.talk {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 6px;
+}
+
+.talk-title {
+    font-size: 1.08em;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.talk-meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.talk-type {
+    font-size: 0.85em;
+    color: #764ba2;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.talk-links {
+    font-size: 0.9em;
+}
+
+.talk-links a {
+    margin-right: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    color: #999;
+    border-top: 2px solid #f0f0f0;
+    margin-top: 70px;
+    font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        background: white;
+    }
+    
+    .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .nav-brand {
+        padding: 15px 0 10px 0;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-menu a {
+        padding: 12px 12px;
+        font-size: 0.9em;
+    }
+    
+    h1, .page-header h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .container {
+        padding: 30px 20px;
+    }
+}

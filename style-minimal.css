@@ -1,0 +1,324 @@
+/* 
+   DESIGN 1: MINIMAL & CLEAN
+   Clean, academic look with subtle colors and lots of whitespace
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background-color: #fafafa;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffffff;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.nav-brand {
+    color: #2c3e50;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 20px 0;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu li::before {
+    content: none;
+}
+
+.nav-menu a {
+    display: block;
+    color: #555;
+    padding: 23px 20px;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.nav-menu a:hover {
+    color: #2c3e50;
+    background-color: #f8f8f8;
+}
+
+.nav-menu a.active {
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background-color: white;
+    min-height: calc(100vh - 60px);
+}
+
+.page-header {
+    text-align: center;
+    padding: 20px 0 50px 0;
+    margin-bottom: 50px;
+}
+
+header h1,
+.page-header h1 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    padding-left: 25px;
+    position: relative;
+}
+
+ul li::before {
+    content: "—";
+    color: #999;
+    position: absolute;
+    left: 0;
+}
+
+.links ul li::before {
+    content: "→";
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid #3498db;
+}
+
+/* Publications */
+.publication {
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.pub-title {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.pub-authors {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.pub-journal {
+    font-size: 0.95em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.pub-links {
+    font-size: 0.9em;
+}
+
+.pub-links a {
+    margin-right: 15px;
+}
+
+/* Grants */
+.grant {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.grant:last-child {
+    border-bottom: none;
+}
+
+.grant-meta {
+    font-size: 0.9em;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project-meta {
+    font-size: 0.9em;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Talks */
+.talk {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.talk:last-child {
+    border-bottom: none;
+}
+
+.talk-title {
+    font-size: 1.05em;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.talk-meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.talk-type {
+    font-size: 0.85em;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.talk-links {
+    font-size: 0.9em;
+}
+
+.talk-links a {
+    margin-right: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    color: #999;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 80px;
+    font-size: 0.85em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .nav-brand {
+        padding: 15px 0 10px 0;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-menu a {
+        padding: 12px 12px;
+        font-size: 0.9em;
+    }
+    
+    h1, .page-header h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .container {
+        padding: 30px 20px;
+    }
+}
